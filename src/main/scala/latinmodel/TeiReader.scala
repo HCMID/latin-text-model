@@ -550,7 +550,7 @@ object TeiReader {
   def fromCorpus(c: Corpus): Vector[TokenAnalysis] = {
     var idx = 0
     val groupedAnalyses = for (cn <- c.nodes) yield {
-      val tokenized = TeiReader.teiToTokens(cn.urn, cn.text, Cite2Urn("urn:cite2:hcmid:${cn.urn.work}_${cn.urn.version}_tokens:"), 0)
+      val tokenized = TeiReader.teiToTokens(cn.urn, cn.text, Cite2Urn("urn:cite2:hcmid:${cn.urn.group}_${cn.urn.work}_${cn.urn.version}_tokens:"), 0)
       idx = idx + tokenized.size
       tokenized
     }
@@ -567,7 +567,7 @@ object TeiReader {
   */
   def fromString(twoColumns: String, delimiter: String = "#") :Vector[TokenAnalysis] = {
     val pairArray = twoColumns.split("\n").map(_.split("#")).map( arr => (CtsUrn(arr(0)), arr(1)))
-    pairArray.flatMap{ case (u,x) => TeiReader.teiToTokens(u,x, Cite2Urn("urn:cite2:hcmid:${u.work}_${u.version}_tokens:")) }.toVector
+    pairArray.flatMap{ case (u,x) => TeiReader.teiToTokens(u,x, Cite2Urn("urn:cite2:hcmid:${u.group}_${u.work}_${u.version}_tokens:")) }.toVector
   }
 
   /** Parse text in a two-column delimited-text file into a vector of analyzed tokens.
@@ -578,7 +578,7 @@ object TeiReader {
   */
   def fromTwoColumnFile(fileName: String, separator: String = "#"): Vector[TokenAnalysis] = {
     val pairArray = scala.io.Source.fromFile(fileName).getLines.toVector.map(_.split(separator)).map( arr => (CtsUrn(arr(0)), arr(1)))
-    pairArray.flatMap{ case (u,x) => TeiReader.teiToTokens(u,x, Cite2Urn("urn:cite2:hcmid:${u.work}_${u.version}_tokens:")) }
+    pairArray.flatMap{ case (u,x) => TeiReader.teiToTokens(u,x, Cite2Urn("urn:cite2:hcmid:${u.group}_${u.work}_${u.version}_tokens:")) }
   }
 
 }
