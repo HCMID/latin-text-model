@@ -550,7 +550,7 @@ object TeiReader {
   def fromCorpus(c: Corpus): Vector[TokenAnalysis] = {
     var idx = 0
     val groupedAnalyses = for (cn <- c.nodes) yield {
-      val tokenized = TeiReader.teiToTokens(cn.urn, cn.text, Cite2Urn("urn:cite2:hcmid:${cn.urn.group}_${cn.urn.work}_${cn.urn.version}_tokens:"), 0)
+      val tokenized = TeiReader.teiToTokens(cn.urn, cn.text, Cite2Urn(s"urn:cite2:hcmid:${cn.urn.textGroup}_${cn.urn.work}_${cn.urn.version}_tokens:"), 0)
       idx = idx + tokenized.size
       tokenized
     }

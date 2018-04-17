@@ -8,8 +8,11 @@ import edu.holycross.shot.ohco2._
 class TeiIngestionSpec extends FlatSpec {
 
   // test structure of result
-  "The TeiReader object"  should "convert well-formed HMT TEI to a Vector of TokenAnalysis objects" in   {
+  "The TeiReader object"  should "convert well-formed HMT TEI to a Vector of TokenAnalysis objects" in  pending /* {
     val xml = """<p>mirum fuit in portento prope maiores habuere   <placeName n="urn:cite2:pliny:place:pl1">alpiis</placeName>      ab <persName n="urn:cite2:pliny:person:p1">hannibale</persName>      exsuperatas et postea          a <rs type="ethnic" n="urn:cite2:pliny:ethnic:et1">cimbris</rs></p>"""
+
+
+
     val urn = CtsUrn("urn:cts:greekLit:tlg5026.msAint.hmt:19.hc_5")
     val coll = Cite2Urn("urn:cite2:hcmid:test:")
     val analysisV = TeiReader.teiToTokens(urn, xml,coll )
@@ -22,7 +25,7 @@ class TeiIngestionSpec extends FlatSpec {
       case ta: TokenAnalysis => assert( ta.analysis.analysis == Cite2Urn("urn:cite2:hmt:va_schAint_tokens:tkn1") )
       case _ => fail("Object is not a TokenAnalysis")
     }
-  }
+  }*/
 
 /*
   it should "record the context of this analysis in the analyzed text's canonical citation scheme" in {
