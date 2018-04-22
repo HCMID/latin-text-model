@@ -19,9 +19,9 @@ libraryDependencies ++= Seq(
   "org.scala-lang.modules" %% "scala-xml" % "1.0.6",
 
 
-  "edu.holycross.shot.cite" %% "xcite" % "3.2.2",
-  "edu.holycross.shot" %% "ohco2" % "10.5.4",
-  "edu.holycross.shot" %% "orca" % "4.0.1"
+  "edu.holycross.shot.cite" %% "xcite" % "3.3.0",
+  "edu.holycross.shot" %% "ohco2" % "10.7.0",
+  "edu.holycross.shot" %% "orca" % "4.0.2"
 )
 
 enablePlugins(TutPlugin)
