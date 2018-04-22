@@ -1,6 +1,7 @@
 
 package edu.holycross.shot.mid
 
+import scala.xml._
 
 
 /** Provides classes modelling HCMID editions of texts in Latin.
@@ -24,8 +25,6 @@ package edu.holycross.shot.mid
    val versionId = "v1"
 
    case class ReadingConfig(title: String, description: String)
-
-
    val exemplarLabels = Map(
      "dipl" -> ReadingConfig("Pure diplomatic reading","description"),
      "ednorm" -> ReadingConfig("Editorially normalized, morphologically parseable reading","description"),
@@ -34,7 +33,7 @@ package edu.holycross.shot.mid
    )
 
 
-
+/*
    val analyticalCollections = Map(
      "tlg0012.tlg001.msA.tokens"-> Cite2Urn("urn:cite2:hmt:va_il_tokens:"),
 
@@ -52,7 +51,7 @@ package edu.holycross.shot.mid
      "tlg5026.msAimlater.hmt.tokens" -> Cite2Urn("urn:cite2:hmt:va_schAimlater_tokens:")
 
    )
-
+*/
 
 
 
@@ -99,10 +98,27 @@ package edu.holycross.shot.mid
     buff.toString
   }
 
+
+
+  /** Recursively collect contents of all text-node
+  * descendants of a given node.
+  * @param n Node to collect from.
+  * @return A single String with all text from n.
+  */
   def collectText(n: xml.Node): String = {
     collectText(n,"")
   }
 
+
+  /** Recursively collect contents of all text node
+  * contents for a well-formed XML fragment serialized as a String.
+  * @param xmlString String with well formed XML.
+  * @return A single String with all text contents from xmlString.
+  */
+  def collectText(xmlString: String): String = {
+    val n = XML.loadString(xmlString)
+    collectText(n,"")
+  }
 
   def hmtNormalize(s: String): String = {
     Normalizer.normalize(s,Form.NFC).trim.replaceAll("[ ]+"," ")
