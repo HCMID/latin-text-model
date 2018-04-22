@@ -148,7 +148,7 @@
         <span class="name">latinmodel</span>
       </span>
       
-      <p class="shortcomment cmt">Provides classes modelling HCMID editions of texts in Latin.</p><div class="fullcomment"><div class="comment cmt"><p>Provides classes modelling HCMID editions of texts in Latin.</p><h4>Overview</h4><p> The starting point is the factory object <span class="extype" name="org.homermultitext.edmodel.TeiReader">org.homermultitext.edmodel.TeiReader</span>, that can read a two-column OHCO2 file to produce a Vector of tuples, pairing a CtsUrn for the citable text node with a <span class="extype" name="org.homermultitext.edmodel.HmtToken">org.homermultitext.edmodel.HmtToken</span>.  Example:</p><pre><span class="kw">val</span> tokenPairs = TeiReader.fromTwoColumns(<span class="lit">"SOURCEFILENAME.tsv"</span>)</pre><p>The crucial structure is the <span class="extype" name="edu.holycross.shot.mid.MIDToken">edu.holycross.shot.mid.MIDToken</span>, which
+      <p class="shortcomment cmt">Provides classes modelling HCMID editions of texts in Latin.</p><div class="fullcomment"><div class="comment cmt"><p>Provides classes modelling HCMID editions of texts in Latin.</p><h4>Overview</h4><p> The starting point is the factory object <a href="LatinTeiReader$.html" class="extype" name="edu.holycross.shot.mid.latinmodel.LatinTeiReader">edu.holycross.shot.mid.latinmodel.LatinTeiReader</a>, that can read a two-column OHCO2 file to produce a Vector of tuples, pairing a CtsUrn for the citable text node with a <a href="MIDToken.html" class="extype" name="edu.holycross.shot.mid.latinmodel.MIDToken">edu.holycross.shot.mid.latinmodel.MIDToken</a>.  Example:</p><pre><span class="kw">val</span> tokenPairs = LatinTeiReader.fromTwoColumns(<span class="lit">"SOURCEFILENAME.tsv"</span>)</pre><p>The crucial structure is the <span class="extype" name="edu.holycross.shot.mid.MIDToken">edu.holycross.shot.mid.MIDToken</span>, which
 captures everything known about a token from an MID edition.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="edu.holycross.shot.mid">mid</a></dd></dl></div>
     </li><li class="current-entities indented5">
@@ -187,6 +187,10 @@ captures everything known about a token from an MID edition.
                         <span class="separator"></span>
                         <a class="object" href="HmtToken$.html" title="Factory for labelling information about tokens."></a>
                         <a href="HmtToken$.html" title="Factory for labelling information about tokens.">HmtToken</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="LatinTeiReader$.html" title="Factory for Vectors of  edu.holycross.shot.mid.latinmodel.MIDToken instances."></a>
+                        <a href="LatinTeiReader$.html" title="Factory for Vectors of  edu.holycross.shot.mid.latinmodel.MIDToken instances.">LatinTeiReader</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="trait" href="LexicalCategory.html" title="All possible lexical categories for a token are enumerated by case objects extending this trait"></a>
@@ -249,10 +253,6 @@ captures everything known about a token from an MID edition.
                         <a href="Restored$.html" title="Reading supplied by modern editor.">Restored</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="object" href="TeiReader$.html" title="Factory for Vectors of  org.homermultitext.edmodel.MIDToken instances."></a>
-                        <a href="TeiReader$.html" title="Factory for Vectors of  org.homermultitext.edmodel.MIDToken instances.">TeiReader</a>
-                      </li><li class="current-entities indented5">
-                        <span class="separator"></span>
                         <a class="class" href="TokenAnalysis.html" title=""></a>
                         <a href="TokenAnalysis.html" title="">TokenAnalysis</a>
                       </li><li class="current-entities indented5">
@@ -291,7 +291,7 @@ captures everything known about a token from an MID edition.
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Provides classes modelling HCMID editions of texts in Latin.</p><h4>Overview</h4><p> The starting point is the factory object <span class="extype" name="org.homermultitext.edmodel.TeiReader">org.homermultitext.edmodel.TeiReader</span>, that can read a two-column OHCO2 file to produce a Vector of tuples, pairing a CtsUrn for the citable text node with a <span class="extype" name="org.homermultitext.edmodel.HmtToken">org.homermultitext.edmodel.HmtToken</span>.  Example:</p><pre><span class="kw">val</span> tokenPairs = TeiReader.fromTwoColumns(<span class="lit">"SOURCEFILENAME.tsv"</span>)</pre><p>The crucial structure is the <span class="extype" name="edu.holycross.shot.mid.MIDToken">edu.holycross.shot.mid.MIDToken</span>, which
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Provides classes modelling HCMID editions of texts in Latin.</p><h4>Overview</h4><p> The starting point is the factory object <a href="LatinTeiReader$.html" class="extype" name="edu.holycross.shot.mid.latinmodel.LatinTeiReader">edu.holycross.shot.mid.latinmodel.LatinTeiReader</a>, that can read a two-column OHCO2 file to produce a Vector of tuples, pairing a CtsUrn for the citable text node with a <a href="MIDToken.html" class="extype" name="edu.holycross.shot.mid.latinmodel.MIDToken">edu.holycross.shot.mid.latinmodel.MIDToken</a>.  Example:</p><pre><span class="kw">val</span> tokenPairs = LatinTeiReader.fromTwoColumns(<span class="lit">"SOURCEFILENAME.tsv"</span>)</pre><p>The crucial structure is the <span class="extype" name="edu.holycross.shot.mid.MIDToken">edu.holycross.shot.mid.MIDToken</span>, which
 captures everything known about a token from an MID edition.
 </p></div><div class="toggleContainer block">
           <span class="toggle">
@@ -434,7 +434,7 @@ are enumerated by case objects extending this trait</p><p>The <code>name</code> 
       
       <p class="shortcomment cmt">All possible lexical categories for a token
 are enumerated by case objects extending this trait</p><div class="fullcomment"><div class="comment cmt"><p>All possible lexical categories for a token
-are enumerated by case objects extending this trait</p><p>The <code>name</code> member must be implemented with an English description of the lexical category</p><p>Used by <span class="extype" name="org.homermultitext.edmodel.HmtToken">org.homermultitext.edmodel.HmtToken</span> and therefore also by <span class="extype" name="org.homermultitext.edmodel.TeiReader">org.homermultitext.edmodel.TeiReader</span></p></div></div>
+are enumerated by case objects extending this trait</p><p>The <code>name</code> member must be implemented with an English description of the lexical category</p><p>Used by <span class="extype" name="edu.holycross.shot.mid.latinmodel.MidToken">edu.holycross.shot.mid.latinmodel.MidToken</span> and therefore also by <a href="LatinTeiReader$.html" class="extype" name="edu.holycross.shot.mid.latinmodel.LatinTeiReader">edu.holycross.shot.mid.latinmodel.LatinTeiReader</a></p></div></div>
     </li><li name="edu.holycross.shot.mid.latinmodel.MIDToken" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="MIDTokenextendsProductwithSerializable"></a><a id="MIDToken:MIDToken"></a>
       <span class="permalink">
@@ -768,6 +768,22 @@ descendants of a given node.</p></div><dl class="paramcmts block"><dt class="par
       </span>
       
       <p class="shortcomment cmt">Factory for labelling information about tokens.</p>
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LatinTeiReader"></a><a id="LatinTeiReader:LatinTeiReader"></a>
+      <span class="permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/index.html#LatinTeiReader" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Factory for Vectors of  edu.holycross.shot.mid.latinmodel.MIDToken instances." href="LatinTeiReader$.html"><span class="name">LatinTeiReader</span></a>
+      </span>
+      
+      <p class="shortcomment cmt"> Factory for Vectors of  <a href="MIDToken.html" class="extype" name="edu.holycross.shot.mid.latinmodel.MIDToken">edu.holycross.shot.mid.latinmodel.MIDToken</a> instances.</p>
     </li><li name="edu.holycross.shot.mid.latinmodel.LexicalToken" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="LexicalToken"></a><a id="LexicalToken:LexicalToken"></a>
       <span class="permalink">
@@ -962,22 +978,6 @@ descendants of a given node.</p></div><dl class="paramcmts block"><dt class="par
       
       <p class="shortcomment cmt">Reading supplied by modern editor.</p><div class="fullcomment"><div class="comment cmt"><p>Reading supplied by modern editor.</p><p>Applies only to editorial expansion of abbreviations.
 </p></div></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="TeiReader"></a><a id="TeiReader:TeiReader"></a>
-      <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/index.html#TeiReader" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a title="Factory for Vectors of  org.homermultitext.edmodel.MIDToken instances." href="TeiReader$.html"><span class="name">TeiReader</span></a>
-      </span>
-      
-      <p class="shortcomment cmt"> Factory for Vectors of  <span class="extype" name="org.homermultitext.edmodel.MIDToken">org.homermultitext.edmodel.MIDToken</span> instances.</p>
     </li><li name="edu.holycross.shot.mid.latinmodel.Unclear" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Unclear"></a><a id="Unclear:Unclear"></a>
       <span class="permalink">

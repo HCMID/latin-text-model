@@ -148,7 +148,7 @@
         <a title="Provides classes modelling HCMID editions of texts in Latin." href="index.html"><span class="name">latinmodel</span></a>
       </span>
       
-      <p class="shortcomment cmt">Provides classes modelling HCMID editions of texts in Latin.</p><div class="fullcomment"><div class="comment cmt"><p>Provides classes modelling HCMID editions of texts in Latin.</p><h4>Overview</h4><p> The starting point is the factory object <span class="extype" name="org.homermultitext.edmodel.TeiReader">org.homermultitext.edmodel.TeiReader</span>, that can read a two-column OHCO2 file to produce a Vector of tuples, pairing a CtsUrn for the citable text node with a <span class="extype" name="org.homermultitext.edmodel.HmtToken">org.homermultitext.edmodel.HmtToken</span>.  Example:</p><pre><span class="kw">val</span> tokenPairs = TeiReader.fromTwoColumns(<span class="lit">"SOURCEFILENAME.tsv"</span>)</pre><p>The crucial structure is the <span class="extype" name="edu.holycross.shot.mid.MIDToken">edu.holycross.shot.mid.MIDToken</span>, which
+      <p class="shortcomment cmt">Provides classes modelling HCMID editions of texts in Latin.</p><div class="fullcomment"><div class="comment cmt"><p>Provides classes modelling HCMID editions of texts in Latin.</p><h4>Overview</h4><p> The starting point is the factory object <a href="LatinTeiReader$.html" class="extype" name="edu.holycross.shot.mid.latinmodel.LatinTeiReader">edu.holycross.shot.mid.latinmodel.LatinTeiReader</a>, that can read a two-column OHCO2 file to produce a Vector of tuples, pairing a CtsUrn for the citable text node with a <a href="MIDToken.html" class="extype" name="edu.holycross.shot.mid.latinmodel.MIDToken">edu.holycross.shot.mid.latinmodel.MIDToken</a>.  Example:</p><pre><span class="kw">val</span> tokenPairs = LatinTeiReader.fromTwoColumns(<span class="lit">"SOURCEFILENAME.tsv"</span>)</pre><p>The crucial structure is the <span class="extype" name="edu.holycross.shot.mid.MIDToken">edu.holycross.shot.mid.MIDToken</span>, which
 captures everything known about a token from an MID edition.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="edu.holycross.shot.mid">mid</a></dd></dl></div>
     </li><li class="current-entities indented5">
@@ -187,6 +187,10 @@ captures everything known about a token from an MID edition.
                         <span class="separator"></span>
                         <a class="object" href="HmtToken$.html" title="Factory for labelling information about tokens."></a>
                         <a href="HmtToken$.html" title="Factory for labelling information about tokens.">HmtToken</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="LatinTeiReader$.html" title="Factory for Vectors of  edu.holycross.shot.mid.latinmodel.MIDToken instances."></a>
+                        <a href="LatinTeiReader$.html" title="Factory for Vectors of  edu.holycross.shot.mid.latinmodel.MIDToken instances.">LatinTeiReader</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="trait" href="LexicalCategory.html" title="All possible lexical categories for a token are enumerated by case objects extending this trait"></a>
@@ -247,10 +251,6 @@ captures everything known about a token from an MID edition.
                         <span class="separator"></span>
                         <a class="object" href="" title="Reading supplied by modern editor."></a>
                         <a href="" title="Reading supplied by modern editor.">Restored</a>
-                      </li><li class="current-entities indented5">
-                        <span class="separator"></span>
-                        <a class="object" href="TeiReader$.html" title="Factory for Vectors of  org.homermultitext.edmodel.MIDToken instances."></a>
-                        <a href="TeiReader$.html" title="Factory for Vectors of  org.homermultitext.edmodel.MIDToken instances.">TeiReader</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="class" href="TokenAnalysis.html" title=""></a>

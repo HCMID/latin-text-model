@@ -6,9 +6,9 @@ package edu.holycross.shot.mid
 /** Provides classes modelling HCMID editions of texts in Latin.
  *
  *  ==Overview==
- *  The starting point is the factory object [[org.homermultitext.edmodel.TeiReader]], that can read a two-column OHCO2 file to produce a Vector of tuples, pairing a CtsUrn for the citable text node with a [[org.homermultitext.edmodel.HmtToken]].  Example:
+ *  The starting point is the factory object [[edu.holycross.shot.mid.latinmodel.LatinTeiReader]], that can read a two-column OHCO2 file to produce a Vector of tuples, pairing a CtsUrn for the citable text node with a [[edu.holycross.shot.mid.latinmodel.MIDToken]].  Example:
  *  {{{
- *  val tokenPairs = TeiReader.fromTwoColumns("SOURCEFILENAME.tsv")
+ *  val tokenPairs = LatinTeiReader.fromTwoColumns("SOURCEFILENAME.tsv")
  *  }}}
  *
  * The crucial structure is the [[edu.holycross.shot.mid.MIDToken]], which

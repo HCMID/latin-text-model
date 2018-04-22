@@ -148,7 +148,7 @@
         <a title="Provides classes modelling HCMID editions of texts in Latin." href="index.html"><span class="name">latinmodel</span></a>
       </span>
       
-      <p class="shortcomment cmt">Provides classes modelling HCMID editions of texts in Latin.</p><div class="fullcomment"><div class="comment cmt"><p>Provides classes modelling HCMID editions of texts in Latin.</p><h4>Overview</h4><p> The starting point is the factory object <span class="extype" name="org.homermultitext.edmodel.TeiReader">org.homermultitext.edmodel.TeiReader</span>, that can read a two-column OHCO2 file to produce a Vector of tuples, pairing a CtsUrn for the citable text node with a <span class="extype" name="org.homermultitext.edmodel.HmtToken">org.homermultitext.edmodel.HmtToken</span>.  Example:</p><pre><span class="kw">val</span> tokenPairs = TeiReader.fromTwoColumns(<span class="lit">"SOURCEFILENAME.tsv"</span>)</pre><p>The crucial structure is the <span class="extype" name="edu.holycross.shot.mid.MIDToken">edu.holycross.shot.mid.MIDToken</span>, which
+      <p class="shortcomment cmt">Provides classes modelling HCMID editions of texts in Latin.</p><div class="fullcomment"><div class="comment cmt"><p>Provides classes modelling HCMID editions of texts in Latin.</p><h4>Overview</h4><p> The starting point is the factory object <a href="" class="extype" name="edu.holycross.shot.mid.latinmodel.LatinTeiReader">edu.holycross.shot.mid.latinmodel.LatinTeiReader</a>, that can read a two-column OHCO2 file to produce a Vector of tuples, pairing a CtsUrn for the citable text node with a <a href="MIDToken.html" class="extype" name="edu.holycross.shot.mid.latinmodel.MIDToken">edu.holycross.shot.mid.latinmodel.MIDToken</a>.  Example:</p><pre><span class="kw">val</span> tokenPairs = LatinTeiReader.fromTwoColumns(<span class="lit">"SOURCEFILENAME.tsv"</span>)</pre><p>The crucial structure is the <span class="extype" name="edu.holycross.shot.mid.MIDToken">edu.holycross.shot.mid.MIDToken</span>, which
 captures everything known about a token from an MID edition.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="edu.holycross.shot.mid">mid</a></dd></dl></div>
     </li><li class="current-entities indented5">
@@ -187,6 +187,10 @@ captures everything known about a token from an MID edition.
                         <span class="separator"></span>
                         <a class="object" href="HmtToken$.html" title="Factory for labelling information about tokens."></a>
                         <a href="HmtToken$.html" title="Factory for labelling information about tokens.">HmtToken</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="" title="Factory for Vectors of  edu.holycross.shot.mid.latinmodel.MIDToken instances."></a>
+                        <a href="" title="Factory for Vectors of  edu.holycross.shot.mid.latinmodel.MIDToken instances.">LatinTeiReader</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="trait" href="LexicalCategory.html" title="All possible lexical categories for a token are enumerated by case objects extending this trait"></a>
@@ -249,10 +253,6 @@ captures everything known about a token from an MID edition.
                         <a href="Restored$.html" title="Reading supplied by modern editor.">Restored</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="object" href="" title="Factory for Vectors of  org.homermultitext.edmodel.MIDToken instances."></a>
-                        <a href="" title="Factory for Vectors of  org.homermultitext.edmodel.MIDToken instances.">TeiReader</a>
-                      </li><li class="current-entities indented5">
-                        <span class="separator"></span>
                         <a class="class" href="TokenAnalysis.html" title=""></a>
                         <a href="TokenAnalysis.html" title="">TokenAnalysis</a>
                       </li><li class="current-entities indented5">
@@ -272,8 +272,8 @@ captures everything known about a token from an MID edition.
       <div id="definition">
         <div class="big-circle object">o</div>
         <p id="owner"><a href="../../../../index.html" class="extype" name="edu">edu</a>.<a href="../../../index.html" class="extype" name="edu.holycross">holycross</a>.<a href="../../index.html" class="extype" name="edu.holycross.shot">shot</a>.<a href="../index.html" class="extype" name="edu.holycross.shot.mid">mid</a>.<a href="index.html" class="extype" name="edu.holycross.shot.mid.latinmodel">latinmodel</a></p>
-        <h1>TeiReader<span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html" title="Permalink">
+        <h1>LatinTeiReader<span class="permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
@@ -286,12 +286,12 @@ captures everything known about a token from an MID edition.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">TeiReader</span>
+        <span class="name">LatinTeiReader</span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p> Factory for Vectors of  <span class="extype" name="org.homermultitext.edmodel.MIDToken">org.homermultitext.edmodel.MIDToken</span> instances.</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p> Factory for Vectors of  <a href="MIDToken.html" class="extype" name="edu.holycross.shot.mid.latinmodel.MIDToken">edu.holycross.shot.mid.latinmodel.MIDToken</a> instances.</p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -321,7 +321,7 @@ captures everything known about a token from an MID edition.
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="edu.holycross.shot.mid.latinmodel.TeiReader"><span>TeiReader</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="edu.holycross.shot.mid.latinmodel.LatinTeiReader"><span>LatinTeiReader</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -351,7 +351,7 @@ captures everything known about a token from an MID edition.
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -367,7 +367,7 @@ captures everything known about a token from an MID edition.
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html###():Int" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -383,7 +383,7 @@ captures everything known about a token from an MID edition.
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -396,10 +396,10 @@ captures everything known about a token from an MID edition.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#abbrExpanChoice" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#abbrExpanChoice" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="abbrExpanChoice(MIDToken:edu.holycross.shot.mid.latinmodel.MIDToken,el:scala.xml.Elem):Unit"></a><a id="abbrExpanChoice(MIDToken,Elem):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#abbrExpanChoice(MIDToken:edu.holycross.shot.mid.latinmodel.MIDToken,el:scala.xml.Elem):Unit" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#abbrExpanChoice(MIDToken:edu.holycross.shot.mid.latinmodel.MIDToken,el:scala.xml.Elem):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -411,12 +411,12 @@ captures everything known about a token from an MID edition.
         <span class="name">abbrExpanChoice</span><span class="params">(<span name="MIDToken">MIDToken: <a href="MIDToken.html" class="extype" name="edu.holycross.shot.mid.latinmodel.MIDToken">MIDToken</a></span>, <span name="el">el: <span class="extype" name="scala.xml.Elem">Elem</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">collect tokens from a TEI <code>abbr-expan</code> pair</p><div class="fullcomment"><div class="comment cmt"><p>collect tokens from a TEI <code>abbr-expan</code> pair</p><p>Results are added to the TeiReader's <code>tokenBuffer</code>.
+      <p class="shortcomment cmt">collect tokens from a TEI <code>abbr-expan</code> pair</p><div class="fullcomment"><div class="comment cmt"><p>collect tokens from a TEI <code>abbr-expan</code> pair</p><p>Results are added to the LatinTeiReader's <code>tokenBuffer</code>.
 </p></div><dl class="paramcmts block"><dt class="param">MIDToken</dt><dd class="cmt"><p>token reflecting reading values for parent context</p></dd><dt class="param">el</dt><dd class="cmt"><p>TEI <code>choice</code> element with <code>abbr-expan</code> children</p></dd></dl></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#addTokensFromElement" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#addTokensFromElement" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="addTokensFromElement(el:scala.xml.Elem,tokenSettings:edu.holycross.shot.mid.latinmodel.MIDToken):Unit"></a><a id="addTokensFromElement(Elem,MIDToken):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#addTokensFromElement(el:scala.xml.Elem,tokenSettings:edu.holycross.shot.mid.latinmodel.MIDToken):Unit" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#addTokensFromElement(el:scala.xml.Elem,tokenSettings:edu.holycross.shot.mid.latinmodel.MIDToken):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -430,10 +430,10 @@ captures everything known about a token from an MID edition.
       
       <p class="shortcomment cmt">Parse an XML element and add all tokens in it to tokenBuffer.</p><div class="fullcomment"><div class="comment cmt"><p>Parse an XML element and add all tokens in it to tokenBuffer.
 </p></div><dl class="paramcmts block"><dt class="param">el</dt><dd class="cmt"><p>XML element to parse.</p></dd><dt class="param">tokenSettings</dt><dd class="cmt"><p>Initial contextual setting for tokens.</p></dd></dl></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#addTokensFromText" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#addTokensFromText" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="addTokensFromText(s:String,tokenSettings:edu.holycross.shot.mid.latinmodel.MIDToken):Unit"></a><a id="addTokensFromText(String,MIDToken):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#addTokensFromText(s:String,tokenSettings:edu.holycross.shot.mid.latinmodel.MIDToken):Unit" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#addTokensFromText(s:String,tokenSettings:edu.holycross.shot.mid.latinmodel.MIDToken):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -450,7 +450,7 @@ captures everything known about a token from an MID edition.
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -466,7 +466,7 @@ captures everything known about a token from an MID edition.
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#clone():Object" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -487,10 +487,10 @@ captures everything known about a token from an MID edition.
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#collectCited" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#collectCited" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="collectCited(currToken:edu.holycross.shot.mid.latinmodel.MIDToken,citElem:scala.xml.Elem):Unit"></a><a id="collectCited(MIDToken,Elem):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#collectCited(currToken:edu.holycross.shot.mid.latinmodel.MIDToken,citElem:scala.xml.Elem):Unit" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#collectCited(currToken:edu.holycross.shot.mid.latinmodel.MIDToken,citElem:scala.xml.Elem):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -505,10 +505,10 @@ captures everything known about a token from an MID edition.
       <p class="shortcomment cmt">collect tokens from cited context
 </p><div class="fullcomment"><div class="comment cmt"><p>collect tokens from cited context
 </p></div><dl class="paramcmts block"><dt class="param">currToken</dt><dd class="cmt"><p>token reflecting reading values for parent context</p></dd><dt class="param">citElem</dt><dd class="cmt"><p>TEI <code>cit</code> element</p></dd></dl></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#collectRefString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#collectRefString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="collectRefString(currToken:edu.holycross.shot.mid.latinmodel.MIDToken,rsElem:scala.xml.Elem):Unit"></a><a id="collectRefString(MIDToken,Elem):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#collectRefString(currToken:edu.holycross.shot.mid.latinmodel.MIDToken,rsElem:scala.xml.Elem):Unit" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#collectRefString(currToken:edu.holycross.shot.mid.latinmodel.MIDToken,rsElem:scala.xml.Elem):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -523,10 +523,10 @@ captures everything known about a token from an MID edition.
       <p class="shortcomment cmt">collect appropriate type of token for varieties of TEI <code>rs</code> usage
 </p><div class="fullcomment"><div class="comment cmt"><p>collect appropriate type of token for varieties of TEI <code>rs</code> usage
 </p></div><dl class="paramcmts block"><dt class="param">currToken</dt><dd class="cmt"><p>token reflecting reading values for parent context</p></dd><dt class="param">rsElem</dt><dd class="cmt"><p>TEI <code>rs</code> element</p></dd></dl></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#collectTokens" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#collectTokens" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="collectTokens(currToken:edu.holycross.shot.mid.latinmodel.MIDToken,n:scala.xml.Node):Unit"></a><a id="collectTokens(MIDToken,Node):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#collectTokens(currToken:edu.holycross.shot.mid.latinmodel.MIDToken,n:scala.xml.Node):Unit" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#collectTokens(currToken:edu.holycross.shot.mid.latinmodel.MIDToken,n:scala.xml.Node):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -540,10 +540,10 @@ captures everything known about a token from an MID edition.
       
       <p class="shortcomment cmt">Collect all tokens descended from a given XML node.</p><div class="fullcomment"><div class="comment cmt"><p>Collect all tokens descended from a given XML node.
 Results are collected in <code>tokenBuffer</code>.</p></div><dl class="paramcmts block"><dt class="param">currToken</dt><dd class="cmt"><p>token reflecting reading values for parent context</p></dd><dt class="param">n</dt><dd class="cmt"><p>XML node to collect content from</p></dd></dl></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#collectWrappedWordReadings" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#collectWrappedWordReadings" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="collectWrappedWordReadings(editorialStatus:edu.holycross.shot.mid.latinmodel.EditorialStatus,n:scala.xml.Node):Unit"></a><a id="collectWrappedWordReadings(EditorialStatus,Node):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#collectWrappedWordReadings(editorialStatus:edu.holycross.shot.mid.latinmodel.EditorialStatus,n:scala.xml.Node):Unit" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#collectWrappedWordReadings(editorialStatus:edu.holycross.shot.mid.latinmodel.EditorialStatus,n:scala.xml.Node):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -555,17 +555,17 @@ Results are collected in <code>tokenBuffer</code>.</p></div><dl class="paramcmts
         <span class="name">collectWrappedWordReadings</span><span class="params">(<span name="editorialStatus">editorialStatus: <a href="EditorialStatus.html" class="extype" name="edu.holycross.shot.mid.latinmodel.EditorialStatus">EditorialStatus</a></span>, <span name="n">n: <span class="extype" name="scala.xml.Node">Node</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">recursively collect all <span class="extype" name="org.homermultitext.edmodel.Reading">org.homermultitext.edmodel.Reading</span> objects descended
-from a given node, and add a Vector of <span class="extype" name="org.homermultitext.edmodel.Reading">org.homermultitext.edmodel.Reading</span>s
-to the TeiReader's <code>wrappedWordBuffer</code>
-</p><div class="fullcomment"><div class="comment cmt"><p>recursively collect all <span class="extype" name="org.homermultitext.edmodel.Reading">org.homermultitext.edmodel.Reading</span> objects descended
-from a given node, and add a Vector of <span class="extype" name="org.homermultitext.edmodel.Reading">org.homermultitext.edmodel.Reading</span>s
-to the TeiReader's <code>wrappedWordBuffer</code>
+      <p class="shortcomment cmt">recursively collect all <a href="Reading.html" class="extype" name="edu.holycross.shot.mid.latinmodel.Reading">edu.holycross.shot.mid.latinmodel.Reading</a> objects descended
+from a given node, and add a Vector of <a href="Reading.html" class="extype" name="edu.holycross.shot.mid.latinmodel.Reading">edu.holycross.shot.mid.latinmodel.Reading</a>s
+to the LatinTeiReader's <code>wrappedWordBuffer</code>
+</p><div class="fullcomment"><div class="comment cmt"><p>recursively collect all <a href="Reading.html" class="extype" name="edu.holycross.shot.mid.latinmodel.Reading">edu.holycross.shot.mid.latinmodel.Reading</a> objects descended
+from a given node, and add a Vector of <a href="Reading.html" class="extype" name="edu.holycross.shot.mid.latinmodel.Reading">edu.holycross.shot.mid.latinmodel.Reading</a>s
+to the LatinTeiReader's <code>wrappedWordBuffer</code>
 </p></div><dl class="paramcmts block"><dt class="param">editorialStatus</dt><dd class="cmt"><p>editorial status of surrounding context</p></dd><dt class="param">n</dt><dd class="cmt"><p>node to descend from</p></dd></dl></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#ctsSafe" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#ctsSafe" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ctsSafe(s:String):String"></a><a id="ctsSafe(String):String"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#ctsSafe(s:String):String" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#ctsSafe(s:String):String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -581,10 +581,10 @@ to the TeiReader's <code>wrappedWordBuffer</code>
 can be used as the extended citation string of a CtsUrn.</p><div class="fullcomment"><div class="comment cmt"><p>URL encode any colon characters in s so that s
 can be used as the extended citation string of a CtsUrn.
 </p></div><dl class="paramcmts block"><dt class="param">s</dt><dd class="cmt"><p>String to use as extended citation string of a CtsUrn.</p></dd></dl></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#deletedText" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#deletedText" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="deletedText(MIDToken:edu.holycross.shot.mid.latinmodel.MIDToken,el:scala.xml.Elem):Unit"></a><a id="deletedText(MIDToken,Elem):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#deletedText(MIDToken:edu.holycross.shot.mid.latinmodel.MIDToken,el:scala.xml.Elem):Unit" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#deletedText(MIDToken:edu.holycross.shot.mid.latinmodel.MIDToken,el:scala.xml.Elem):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -597,10 +597,10 @@ can be used as the extended citation string of a CtsUrn.
       </span>
       
       
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#disambiguateNamedEntity" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#disambiguateNamedEntity" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="disambiguateNamedEntity(currToken:edu.holycross.shot.mid.latinmodel.MIDToken,el:scala.xml.Elem):Unit"></a><a id="disambiguateNamedEntity(MIDToken,Elem):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#disambiguateNamedEntity(currToken:edu.holycross.shot.mid.latinmodel.MIDToken,el:scala.xml.Elem):Unit" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#disambiguateNamedEntity(currToken:edu.holycross.shot.mid.latinmodel.MIDToken,el:scala.xml.Elem):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -619,7 +619,7 @@ Should be one of <code>persName</code>, <code>placeName</code> or <code>rs</code
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -635,7 +635,7 @@ Should be one of <code>persName</code>, <code>placeName</code> or <code>rs</code
     </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#equals(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#equals(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -651,7 +651,7 @@ Should be one of <code>persName</code>, <code>placeName</code> or <code>rs</code
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#finalize():Unit" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -670,10 +670,10 @@ Should be one of <code>persName</code>, <code>placeName</code> or <code>rs</code
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#fromCorpus" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#fromCorpus" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="fromCorpus(c:edu.holycross.shot.ohco2.Corpus):Vector[edu.holycross.shot.mid.latinmodel.TokenAnalysis]"></a><a id="fromCorpus(Corpus):Vector[TokenAnalysis]"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#fromCorpus(c:edu.holycross.shot.ohco2.Corpus):Vector[edu.holycross.shot.mid.latinmodel.TokenAnalysis]" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#fromCorpus(c:edu.holycross.shot.ohco2.Corpus):Vector[edu.holycross.shot.mid.latinmodel.TokenAnalysis]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -687,10 +687,10 @@ Should be one of <code>persName</code>, <code>placeName</code> or <code>rs</code
       
       <p class="shortcomment cmt">Parse a corpus into a vector of analyzed tokens.</p><div class="fullcomment"><div class="comment cmt"><p>Parse a corpus into a vector of analyzed tokens.
 </p></div><dl class="paramcmts block"><dt class="param">c</dt><dd class="cmt"><p>Corpus to parse.</p></dd></dl></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#fromString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#fromString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="fromString(twoColumns:String,delimiter:String):Vector[edu.holycross.shot.mid.latinmodel.TokenAnalysis]"></a><a id="fromString(String,String):Vector[TokenAnalysis]"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#fromString(twoColumns:String,delimiter:String):Vector[edu.holycross.shot.mid.latinmodel.TokenAnalysis]" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#fromString(twoColumns:String,delimiter:String):Vector[edu.holycross.shot.mid.latinmodel.TokenAnalysis]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -704,10 +704,10 @@ Should be one of <code>persName</code>, <code>placeName</code> or <code>rs</code
       
       <p class="shortcomment cmt">Parse a String in two-column format into a vector of analyzed tokens.</p><div class="fullcomment"><div class="comment cmt"><p>Parse a String in two-column format into a vector of analyzed tokens.
 </p></div><dl class="paramcmts block"><dt class="param">twoColumns</dt><dd class="cmt"><p>String in two-column forat.</p></dd><dt class="param">delimiter</dt><dd class="cmt"><p>String value to use as column delimiter.</p></dd></dl></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#fromTwoColumnFile" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#fromTwoColumnFile" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="fromTwoColumnFile(fileName:String,separator:String):Vector[edu.holycross.shot.mid.latinmodel.TokenAnalysis]"></a><a id="fromTwoColumnFile(String,String):Vector[TokenAnalysis]"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#fromTwoColumnFile(fileName:String,separator:String):Vector[edu.holycross.shot.mid.latinmodel.TokenAnalysis]" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#fromTwoColumnFile(fileName:String,separator:String):Vector[edu.holycross.shot.mid.latinmodel.TokenAnalysis]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -721,10 +721,10 @@ Should be one of <code>persName</code>, <code>placeName</code> or <code>rs</code
       
       <p class="shortcomment cmt">Parse text in a two-column delimited-text file into a vector of analyzed tokens.</p><div class="fullcomment"><div class="comment cmt"><p>Parse text in a two-column delimited-text file into a vector of analyzed tokens.
 </p></div><dl class="paramcmts block"><dt class="param">fileName</dt><dd class="cmt"><p>Name of file to parse.</p></dd><dt class="param">separator</dt><dd class="cmt"><p>String value to use as column delimiter.</p></dd></dl></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#getAlternate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#getAlternate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getAlternate(MIDToken:edu.holycross.shot.mid.latinmodel.MIDToken,choiceElem:scala.xml.Elem):Unit"></a><a id="getAlternate(MIDToken,Elem):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#getAlternate(MIDToken:edu.holycross.shot.mid.latinmodel.MIDToken,choiceElem:scala.xml.Elem):Unit" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#getAlternate(MIDToken:edu.holycross.shot.mid.latinmodel.MIDToken,choiceElem:scala.xml.Elem):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -742,7 +742,7 @@ Should be one of <code>persName</code>, <code>placeName</code> or <code>rs</code
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#getClass():Class[_]" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -761,7 +761,7 @@ Should be one of <code>persName</code>, <code>placeName</code> or <code>rs</code
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#hashCode():Int" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#hashCode():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -777,10 +777,10 @@ Should be one of <code>persName</code>, <code>placeName</code> or <code>rs</code
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#indexSubstring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#indexSubstring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="indexSubstring(s:String,sub:String):Int"></a><a id="indexSubstring(String,String):Int"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#indexSubstring(s:String,sub:String):Int" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#indexSubstring(s:String,sub:String):Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -798,7 +798,7 @@ is updated as a side effect of this.
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -814,7 +814,7 @@ is updated as a side effect of this.
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -827,10 +827,10 @@ is updated as a side effect of this.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#nodeText" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#nodeText" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="nodeText:StringBuilder"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#nodeText:StringBuilder" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#nodeText:StringBuilder" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -846,7 +846,7 @@ is updated as a side effect of this.
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#notify():Unit" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -865,7 +865,7 @@ is updated as a side effect of this.
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#notifyAll():Unit" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -881,10 +881,10 @@ is updated as a side effect of this.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#origRegChoice" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#origRegChoice" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="origRegChoice(MIDToken:edu.holycross.shot.mid.latinmodel.MIDToken,el:scala.xml.Elem):Unit"></a><a id="origRegChoice(MIDToken,Elem):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#origRegChoice(MIDToken:edu.holycross.shot.mid.latinmodel.MIDToken,el:scala.xml.Elem):Unit" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#origRegChoice(MIDToken:edu.holycross.shot.mid.latinmodel.MIDToken,el:scala.xml.Elem):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -896,12 +896,12 @@ is updated as a side effect of this.
         <span class="name">origRegChoice</span><span class="params">(<span name="MIDToken">MIDToken: <a href="MIDToken.html" class="extype" name="edu.holycross.shot.mid.latinmodel.MIDToken">MIDToken</a></span>, <span name="el">el: <span class="extype" name="scala.xml.Elem">Elem</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">collect tokens from a TEI <code>orig-reg</code> pair</p><div class="fullcomment"><div class="comment cmt"><p>collect tokens from a TEI <code>orig-reg</code> pair</p><p>Results are added to the TeiReader's <code>tokenBuffer</code>.
+      <p class="shortcomment cmt">collect tokens from a TEI <code>orig-reg</code> pair</p><div class="fullcomment"><div class="comment cmt"><p>collect tokens from a TEI <code>orig-reg</code> pair</p><p>Results are added to the LatinTeiReader's <code>tokenBuffer</code>.
 </p></div><dl class="paramcmts block"><dt class="param">MIDToken</dt><dd class="cmt"><p>token reflecting reading values for parent context</p></dd><dt class="param">el</dt><dd class="cmt"><p>TEI <code>choice</code> element with <code>orig-reg</code> children</p></dd></dl></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#punctuationSplitter" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#punctuationSplitter" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="punctuationSplitter:String"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#punctuationSplitter:String" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#punctuationSplitter:String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -916,10 +916,10 @@ is updated as a side effect of this.
       <p class="shortcomment cmt">awesome regular expression to split a string on
 HMT Greek punctuation characters while keeping the
 punctuation characters as individual tokens.</p>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#sicCorrChoice" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#sicCorrChoice" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="sicCorrChoice(MIDToken:edu.holycross.shot.mid.latinmodel.MIDToken,el:scala.xml.Elem):Unit"></a><a id="sicCorrChoice(MIDToken,Elem):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#sicCorrChoice(MIDToken:edu.holycross.shot.mid.latinmodel.MIDToken,el:scala.xml.Elem):Unit" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#sicCorrChoice(MIDToken:edu.holycross.shot.mid.latinmodel.MIDToken,el:scala.xml.Elem):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -931,12 +931,12 @@ punctuation characters as individual tokens.</p>
         <span class="name">sicCorrChoice</span><span class="params">(<span name="MIDToken">MIDToken: <a href="MIDToken.html" class="extype" name="edu.holycross.shot.mid.latinmodel.MIDToken">MIDToken</a></span>, <span name="el">el: <span class="extype" name="scala.xml.Elem">Elem</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">collect tokens from a TEI <code>sic-corr</code> pair</p><div class="fullcomment"><div class="comment cmt"><p>collect tokens from a TEI <code>sic-corr</code> pair</p><p>Results are added to the TeiReader's <code>tokenBuffer</code>.
+      <p class="shortcomment cmt">collect tokens from a TEI <code>sic-corr</code> pair</p><div class="fullcomment"><div class="comment cmt"><p>collect tokens from a TEI <code>sic-corr</code> pair</p><p>Results are added to the LatinTeiReader's <code>tokenBuffer</code>.
 </p></div><dl class="paramcmts block"><dt class="param">MIDToken</dt><dd class="cmt"><p>token reflecting reading values for parent context</p></dd><dt class="param">el</dt><dd class="cmt"><p>TEI <code>choice</code> element with <code>sic-corr</code> children</p></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -949,10 +949,10 @@ punctuation characters as individual tokens.</p>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#teiToTokens" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#teiToTokens" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="teiToTokens(u:edu.holycross.shot.cite.CtsUrn,xmlStr:String,analyticalCollection:edu.holycross.shot.cite.Cite2Urn,tokenCount:Int):Vector[edu.holycross.shot.mid.latinmodel.TokenAnalysis]"></a><a id="teiToTokens(CtsUrn,String,Cite2Urn,Int):Vector[TokenAnalysis]"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#teiToTokens(u:edu.holycross.shot.cite.CtsUrn,xmlStr:String,analyticalCollection:edu.holycross.shot.cite.Cite2Urn,tokenCount:Int):Vector[edu.holycross.shot.mid.latinmodel.TokenAnalysis]" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#teiToTokens(u:edu.holycross.shot.cite.CtsUrn,xmlStr:String,analyticalCollection:edu.holycross.shot.cite.Cite2Urn,tokenCount:Int):Vector[edu.holycross.shot.mid.latinmodel.TokenAnalysis]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -965,13 +965,13 @@ punctuation characters as individual tokens.</p>
       </span>
       
       <p class="shortcomment cmt">Read an XML fragment following HMT conventions to represent a single
-citable node, and construct a Vector of (CtsUrn,<span class="extype" name="org.homermultitext.edmodel.MIDToken">org.homermultitext.edmodel.MIDToken</span>) tuples from it.</p><div class="fullcomment"><div class="comment cmt"><p>Read an XML fragment following HMT conventions to represent a single
-citable node, and construct a Vector of (CtsUrn,<span class="extype" name="org.homermultitext.edmodel.MIDToken">org.homermultitext.edmodel.MIDToken</span>) tuples from it.
+citable node, and construct a Vector of (CtsUrn,<a href="MIDToken.html" class="extype" name="edu.holycross.shot.mid.latinmodel.MIDToken">edu.holycross.shot.mid.latinmodel.MIDToken</a>) tuples from it.</p><div class="fullcomment"><div class="comment cmt"><p>Read an XML fragment following HMT conventions to represent a single
+citable node, and construct a Vector of (CtsUrn,<a href="MIDToken.html" class="extype" name="edu.holycross.shot.mid.latinmodel.MIDToken">edu.holycross.shot.mid.latinmodel.MIDToken</a>) tuples from it.
 </p></div><dl class="paramcmts block"><dt class="param">u</dt><dd class="cmt"><p>URN for the citable node</p></dd><dt class="param">xmlStr</dt><dd class="cmt"><p>XML text for the citable node</p></dd></dl></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#toString():String" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#toString():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -984,10 +984,10 @@ citable node, and construct a Vector of (CtsUrn,<span class="extype" name="org.h
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#tokenBuffer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#tokenBuffer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="tokenBuffer:scala.collection.mutable.ArrayBuffer[edu.holycross.shot.mid.latinmodel.MIDToken]"></a><a id="tokenBuffer:ArrayBuffer[MIDToken]"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#tokenBuffer:scala.collection.mutable.ArrayBuffer[edu.holycross.shot.mid.latinmodel.MIDToken]" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#tokenBuffer:scala.collection.mutable.ArrayBuffer[edu.holycross.shot.mid.latinmodel.MIDToken]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -999,11 +999,11 @@ citable node, and construct a Vector of (CtsUrn,<span class="extype" name="org.h
         <span class="name">tokenBuffer</span><span class="result">: <span class="extype" name="scala.collection.mutable.ArrayBuffer">ArrayBuffer</span>[<a href="MIDToken.html" class="extype" name="edu.holycross.shot.mid.latinmodel.MIDToken">MIDToken</a>]</span>
       </span>
       
-      <p class="shortcomment cmt">Buffer of recursively accumulated <span class="extype" name="org.homermultitext.edmodel.MIDToken">org.homermultitext.edmodel.MIDToken</span>s.</p>
+      <p class="shortcomment cmt">Buffer of recursively accumulated <a href="MIDToken.html" class="extype" name="edu.holycross.shot.mid.latinmodel.MIDToken">edu.holycross.shot.mid.latinmodel.MIDToken</a>s.</p>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#wait():Unit" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1025,7 +1025,7 @@ citable node, and construct a Vector of (CtsUrn,<span class="extype" name="org.h
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1047,7 +1047,7 @@ citable node, and construct a Vector of (CtsUrn,<span class="extype" name="org.h
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1068,10 +1068,10 @@ citable node, and construct a Vector of (CtsUrn,<span class="extype" name="org.h
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel.TeiReader#wrappedWordBuffer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel.LatinTeiReader#wrappedWordBuffer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="wrappedWordBuffer:scala.collection.mutable.ArrayBuffer[edu.holycross.shot.mid.latinmodel.Reading]"></a><a id="wrappedWordBuffer:ArrayBuffer[Reading]"></a>
       <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/TeiReader$.html#wrappedWordBuffer:scala.collection.mutable.ArrayBuffer[edu.holycross.shot.mid.latinmodel.Reading]" title="Permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/LatinTeiReader$.html#wrappedWordBuffer:scala.collection.mutable.ArrayBuffer[edu.holycross.shot.mid.latinmodel.Reading]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1083,7 +1083,7 @@ citable node, and construct a Vector of (CtsUrn,<span class="extype" name="org.h
         <span class="name">wrappedWordBuffer</span><span class="result">: <span class="extype" name="scala.collection.mutable.ArrayBuffer">ArrayBuffer</span>[<a href="Reading.html" class="extype" name="edu.holycross.shot.mid.latinmodel.Reading">Reading</a>]</span>
       </span>
       
-      <p class="shortcomment cmt">Buffer of recursively accumulated <span class="extype" name="org.homermultitext.edmodel.Reading">org.homermultitext.edmodel.Reading</span>s
+      <p class="shortcomment cmt">Buffer of recursively accumulated <a href="Reading.html" class="extype" name="edu.holycross.shot.mid.latinmodel.Reading">edu.holycross.shot.mid.latinmodel.Reading</a>s
 for a single token.</p>
     </li>
               </ol>

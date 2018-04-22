@@ -9,20 +9,20 @@ import scala.io.Source
 import edu.holycross.shot.ohco2._
 import edu.holycross.shot.cite._
 
-/**  Factory for Vectors of  [[org.homermultitext.edmodel.MIDToken]] instances.
+/**  Factory for Vectors of  [[edu.holycross.shot.mid.latinmodel.MIDToken]] instances.
 */
-object TeiReader {
+object LatinTeiReader {
 
   /**  Builder for recursively accumulated String value of a node.
   */
   var nodeText = StringBuilder.newBuilder
 
 
-  /** Buffer of recursively accumulated [[org.homermultitext.edmodel.MIDToken]]s.
+  /** Buffer of recursively accumulated [[edu.holycross.shot.mid.latinmodel.MIDToken]]s.
   */
   var tokenBuffer = scala.collection.mutable.ArrayBuffer.empty[MIDToken]
 
-  /** Buffer of recursively accumulated [[org.homermultitext.edmodel.Reading]]s
+  /** Buffer of recursively accumulated [[edu.holycross.shot.mid.latinmodel.Reading]]s
   * for a single token. */
   var wrappedWordBuffer = scala.collection.mutable.ArrayBuffer.empty[Reading]
 
@@ -32,9 +32,9 @@ object TeiReader {
   */
   val punctuationSplitter = "((?<=[,;:⁑\\.])|(?=[,;:⁑\\.]))"
 
-  /** recursively collect all [[org.homermultitext.edmodel.Reading]] objects descended
-  * from a given node, and add a Vector of [[org.homermultitext.edmodel.Reading]]s
-  * to the TeiReader's `wrappedWordBuffer`
+  /** recursively collect all [[edu.holycross.shot.mid.latinmodel.Reading]] objects descended
+  * from a given node, and add a Vector of [[edu.holycross.shot.mid.latinmodel.Reading]]s
+  * to the LatinTeiReader's `wrappedWordBuffer`
   *
   * @param editorialStatus editorial status of surrounding context
   * @param n node to descend from
@@ -68,7 +68,7 @@ object TeiReader {
 
   /** collect tokens from a TEI `abbr-expan` pair
   *
-  * Results are added to the TeiReader's `tokenBuffer`.
+  * Results are added to the LatinTeiReader's `tokenBuffer`.
   *
   * @param MIDToken token reflecting reading values for parent context
   * @param el TEI `choice` element with `abbr-expan` children
@@ -86,7 +86,7 @@ object TeiReader {
 
   /** collect tokens from a TEI `sic-corr` pair
   *
-  * Results are added to the TeiReader's `tokenBuffer`.
+  * Results are added to the LatinTeiReader's `tokenBuffer`.
   *
   * @param MIDToken token reflecting reading values for parent context
   * @param el TEI `choice` element with `sic-corr` children
@@ -116,7 +116,7 @@ object TeiReader {
 
   /** collect tokens from a TEI `orig-reg` pair
   *
-  * Results are added to the TeiReader's `tokenBuffer`.
+  * Results are added to the LatinTeiReader's `tokenBuffer`.
   *
   * @param MIDToken token reflecting reading values for parent context
   * @param el TEI `choice` element with `orig-reg` children
@@ -497,7 +497,7 @@ object TeiReader {
 
 
   /** Read an XML fragment following HMT conventions to represent a single
-  * citable node, and construct a Vector of (CtsUrn,[[org.homermultitext.edmodel.MIDToken]]) tuples from it.
+  * citable node, and construct a Vector of (CtsUrn,[[edu.holycross.shot.mid.latinmodel.MIDToken]]) tuples from it.
   *
   * @param u URN for the citable node
   * @param xmlStr XML text for the citable node
@@ -550,7 +550,7 @@ object TeiReader {
   def fromCorpus(c: Corpus): Vector[TokenAnalysis] = {
     var idx = 0
     val groupedAnalyses = for (cn <- c.nodes) yield {
-      val tokenized = TeiReader.teiToTokens(cn.urn, cn.text, Cite2Urn(s"urn:cite2:hcmid:${cn.urn.textGroup}_${cn.urn.work}_${cn.urn.version}_tokens:"), 0)
+      val tokenized = LatinTeiReader.teiToTokens(cn.urn, cn.text, Cite2Urn(s"urn:cite2:hcmid:${cn.urn.textGroup}_${cn.urn.work}_${cn.urn.version}_tokens:"), 0)
       idx = idx + tokenized.size
       tokenized
     }
@@ -567,7 +567,7 @@ object TeiReader {
   */
   def fromString(twoColumns: String, delimiter: String = "#") :Vector[TokenAnalysis] = {
     val pairArray = twoColumns.split("\n").map(_.split("#")).map( arr => (CtsUrn(arr(0)), arr(1)))
-    pairArray.flatMap{ case (u,x) => TeiReader.teiToTokens(u,x, Cite2Urn("urn:cite2:hcmid:${u.group}_${u.work}_${u.version}_tokens:")) }.toVector
+    pairArray.flatMap{ case (u,x) => LatinTeiReader.teiToTokens(u,x, Cite2Urn("urn:cite2:hcmid:${u.group}_${u.work}_${u.version}_tokens:")) }.toVector
   }
 
   /** Parse text in a two-column delimited-text file into a vector of analyzed tokens.
@@ -578,7 +578,7 @@ object TeiReader {
   */
   def fromTwoColumnFile(fileName: String, separator: String = "#"): Vector[TokenAnalysis] = {
     val pairArray = scala.io.Source.fromFile(fileName).getLines.toVector.map(_.split(separator)).map( arr => (CtsUrn(arr(0)), arr(1)))
-    pairArray.flatMap{ case (u,x) => TeiReader.teiToTokens(u,x, Cite2Urn("urn:cite2:hcmid:${u.group}_${u.work}_${u.version}_tokens:")) }
+    pairArray.flatMap{ case (u,x) => LatinTeiReader.teiToTokens(u,x, Cite2Urn("urn:cite2:hcmid:${u.group}_${u.work}_${u.version}_tokens:")) }
   }
 
 }

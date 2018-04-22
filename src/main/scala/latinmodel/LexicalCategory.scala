@@ -5,7 +5,7 @@ package edu.holycross.shot.mid.latinmodel
 *
 * The `name` member must be implemented with an English description of the lexical category
 *
-* Used by [[org.homermultitext.edmodel.HmtToken]] and therefore also by [[org.homermultitext.edmodel.TeiReader]]
+* Used by [[edu.holycross.shot.mid.latinmodel.MidToken]] and therefore also by [[edu.holycross.shot.mid.latinmodel.LatinTeiReader]]
 */
 sealed trait LexicalCategory {def name : String}
 /** parseable lexical token */
