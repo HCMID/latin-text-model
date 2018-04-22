@@ -13,7 +13,7 @@ class HmtTokenReadingSpec extends FlatSpec {
         exsuperatas et postea
         a <rs type="ethnic" n="urn:cite2:pliny:ethnic:et1">cimbris</rs></p>"""
   val urn = CtsUrn("urn:cts:latinLit:phi0978.phi001.bamberg:36.1")
-  val analysisV = TeiReader.teiToTokens(urn, xml, Cite2Urn("urn:cite2:hcmid:phi0978_phi001_bamberg_tokens:"))
+  val analysisV = LatinTeiReader.teiToTokens(urn, xml, Cite2Urn("urn:cite2:hcmid:phi0978_phi001_bamberg_tokens:"))
 
 
   "A token analysis"  should "have a URN identifying the text node" in  {

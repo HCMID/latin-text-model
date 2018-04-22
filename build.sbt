@@ -2,7 +2,7 @@
 organization := "edu.holycross.shot.mid"
 name := "latin-text-model"
 
-version := "1.0.0"
+version := "1.0.1"
 
 crossScalaVersions in ThisBuild := Seq("2.11.8", "2.12.4")
 scalaVersion := (crossScalaVersions in ThisBuild).value.last
