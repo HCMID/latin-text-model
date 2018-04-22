@@ -6,7 +6,7 @@ package edu.holycross.shot.mid.latinmodel
 *
 * The `name` member must be implemented with an English description of the discourse status
 *
-* Used by [[org.homermultitext.edmodel.HmtToken]] and therefore also by [[org.homermultitext.edmodel.TeiReader]]
+* Used by [[edu.holycross.shot.mid.latinmodel.MIDToken]] and therefore also by [[edu.holycross.shot.mid.latinmodel.LatinTeiReader]]
 */
 sealed trait DiscourseCategory {def name : String}
 /** token in direct voice of text */

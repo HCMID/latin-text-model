@@ -6,7 +6,7 @@ package edu.holycross.shot.mid.latinmodel
 *
 * The `name` member must be implemented with an English description of the editorial status
 *
-* Used by [[org.homermultitext.edmodel.Reading]] and therefore also by [[org.homermultitext.edmodel.HmtToken]] and [[org.homermultitext.edmodel.TeiReader]]
+* Used by [[edu.holycross.shot.mid.latinmodel.Reading]] and therefore also by [[edu.holycross.shot.mid.latinmodel.MIDToken]] and [[edu.holycross.shot.mid.latinmodel.LatinTeiReader]]
 *
 */
 sealed trait EditorialStatus {def name : String}

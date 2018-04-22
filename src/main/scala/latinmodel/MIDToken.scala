@@ -13,10 +13,10 @@ import java.text.Normalizer
 * @param sourceUrn URN for this token in the analyzed text
 * @param editionUrn URN for this token in an analytical exemplar when promoted to an edition
 * @param lang 3-letter language code for the language code of this token, or a descriptive string if no ISO code defined for this language
-* @param readings All [[org.homermultitext.edmodel.Reading]]s belonging to this token
+* @param readings All [[edu.holycross.shot.mid.latinmodel.Reading]]s belonging to this token
 * @param lexicalCategory lexical category of this token
 * @param lexicalDisambiguation URN for automated method to disambiguate tokens of a given type, or manually disambiguated URN for named entity values
-* @param alternateReading optional [[org.homermultitext.edmodel.AlternateReading]]s belonging to this token
+* @param alternateReading optional [[edu.holycross.shot.mid.latinmodel.AlternateReading]]s belonging to this token
 * @param discourse category of discourse of this token
 * @param externalSource URN of source this token is quoted from
 * @param errors list of error messages (hopefully empty)

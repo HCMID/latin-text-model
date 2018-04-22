@@ -11,7 +11,7 @@ package edu.holycross.shot.mid
  *  val tokenPairs = LatinTeiReader.fromTwoColumns("SOURCEFILENAME.tsv")
  *  }}}
  *
- * The crucial structure is the [[edu.holycross.shot.mid.MIDToken]], which
+ * The crucial structure is the [[edu.holycross.shot.mid.latinmodel.MIDToken]], which
  * captures everything known about a token from an MID edition.
  */
  package object latinmodel {
