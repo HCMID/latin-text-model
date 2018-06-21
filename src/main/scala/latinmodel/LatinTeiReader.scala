@@ -240,6 +240,9 @@ object LatinTeiReader {
        case "ethnic" => {
          disambiguateNamedEntity(currToken,rsElem)
        }
+       case "padj" => {
+         disambiguateNamedEntity(currToken,rsElem)
+       }
 
        case s: String => {
          var errorList = currToken.errors :+ "unrecognized value for @type attribute on rs element " + s
@@ -374,6 +377,17 @@ object LatinTeiReader {
       case "figDesc" => {} // metadata, don't process
       case "ref" => {} // metadata, don't process
 
+
+      case "del" => {
+        wrappedWordBuffer.clear
+        collectWrappedWordReadings(Clear,el)
+        val alt = AlternateReading(Deletion,Vector.empty[Reading])
+        val newToken = tokenSettings.copy(alternateReading = Some(alt), readings = wrappedWordBuffer.toVector)
+        wrappedWordBuffer.clear
+        tokenBuffer += newToken
+      }
+
+
       case "persName" => {
         disambiguateNamedEntity(tokenSettings,el)
       }
@@ -395,12 +409,15 @@ object LatinTeiReader {
       }
 
       case "add" => {
-        //  multiform
-        //
+        //  multiform?  Or correction?
         wrappedWordBuffer.clear
         collectWrappedWordReadings(Clear,el)
         val alt = AlternateReading(Multiform,wrappedWordBuffer.toVector)
         wrappedWordBuffer.clear
+        val newToken = tokenSettings.copy(alternateReading = Some(alt), readings = wrappedWordBuffer.toVector)
+        wrappedWordBuffer.clear
+        tokenBuffer += newToken
+
       }
 
       case "q" => {
