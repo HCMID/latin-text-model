@@ -17,6 +17,10 @@ case object Multiform extends AlternateCategory {val name
  /** scribal correction of text */
 case object Correction extends AlternateCategory {val name = "scribal correction"}
 
+/** Scribal deletion of text. */
+case object Deletion extends AlternateCategory {val name = "scribal deletion"}
+
+
 /** an alternate reading for a token
 *
 * The `name` member must be implemented with an English description of the editorial status

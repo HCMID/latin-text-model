@@ -7,7 +7,7 @@ This library is closely modelled on  the Homer Multitext text model (see the [hm
 ## Version info and documentation
 
 
-Current version: **1.1.0**.  See [release notes](releases.md)
+Current version: **1.3.0**.  See [release notes](releases.md)
 
 
 Documentation forthcoming.  Initial API docs are available from this web site:  <https://hcmid.github.io/latin-text-model>.

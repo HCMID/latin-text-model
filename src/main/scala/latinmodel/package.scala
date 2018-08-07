@@ -58,17 +58,17 @@ import scala.xml._
 
   // perhaps should be a function retrieving
   // list by text group and lexical category?
-  val punctuation = Vector(",",".",";",":","⁑")
+  val punctuation = Vector(",",".",";",":")
 
   // only need list of elements *not* explicitly
   // caught in big case match below
   val validElements = Vector(
-    "div", "l","p", "choice","list","item",  "figure","figDesc","floatingText",
+    "div", "ab", "l","p", "choice","list","item",  "figure","figDesc","floatingText",
     "foreign",
     "num",
     "unclear","add","orig","reg","sic","corr",
     "abbr","expan",
-    "cite","q","ref", "title",
+    "cit","q","ref", "title",
     "persName","placeName",
     "rs"
   )
