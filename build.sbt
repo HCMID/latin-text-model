@@ -23,5 +23,6 @@ libraryDependencies ++= Seq(
   "edu.holycross.shot" %% "ohco2" % "10.9.0",
   "edu.holycross.shot" %% "orca" % "4.2.0"
 )
-
+tutTargetDirectory := file("docs")
+tutSourceDirectory := file("tut")
 enablePlugins(TutPlugin)
