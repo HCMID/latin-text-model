@@ -509,23 +509,7 @@ are enumerated by case objects extending this trait</p><p>The <code>name</code> 
         <div class="values members">
               <h3>Value Members</h3>
               <ol>
-                <li name="edu.holycross.shot.mid.latinmodel#analyticalCollections" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="analyticalCollections:scala.collection.immutable.Map[String,edu.holycross.shot.cite.Cite2Urn]"></a><a id="analyticalCollections:Map[String,Cite2Urn]"></a>
-      <span class="permalink">
-      <a href="../../../../../edu/holycross/shot/mid/latinmodel/index.html#analyticalCollections:scala.collection.immutable.Map[String,edu.holycross.shot.cite.Cite2Urn]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">analyticalCollections</span><span class="result">: <span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <span class="extype" name="edu.holycross.shot.cite.Cite2Urn">Cite2Urn</span>]</span>
-      </span>
-      
-      
-    </li><li name="edu.holycross.shot.mid.latinmodel#codeptList" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+                <li name="edu.holycross.shot.mid.latinmodel#codeptList" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="codeptList(s:String,idx:Int,codepoints:List[Int]):List[Int]"></a><a id="codeptList(String,Int,List[Int]):List[Int]"></a>
       <span class="permalink">
       <a href="../../../../../edu/holycross/shot/mid/latinmodel/index.html#codeptList(s:String,idx:Int,codepoints:List[Int]):List[Int]" title="Permalink">
@@ -542,7 +526,25 @@ are enumerated by case objects extending this trait</p><p>The <code>name</code> 
       
       <p class="shortcomment cmt">Recursively get list of code points for a String.</p><div class="fullcomment"><div class="comment cmt"><p>Recursively get list of code points for a String.
 </p></div><dl class="paramcmts block"><dt class="param">s</dt><dd class="cmt"><p>String to get codepoints for.</p></dd><dt class="param">idx</dt><dd class="cmt"><p>Index of codepoint to start from.</p></dd><dt class="param">codepoints</dt><dd class="cmt"><p>List of codepoints seen so fare.</p></dd></dl></div>
-    </li><li name="edu.holycross.shot.mid.latinmodel#collectText" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="edu.holycross.shot.mid.latinmodel#collectText" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="collectText(xmlString:String):String"></a><a id="collectText(String):String"></a>
+      <span class="permalink">
+      <a href="../../../../../edu/holycross/shot/mid/latinmodel/index.html#collectText(xmlString:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">collectText</span><span class="params">(<span name="xmlString">xmlString: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Recursively collect contents of all text node
+contents for a well-formed XML fragment serialized as a String.</p><div class="fullcomment"><div class="comment cmt"><p>Recursively collect contents of all text node
+contents for a well-formed XML fragment serialized as a String.</p></div><dl class="paramcmts block"><dt class="param">xmlString</dt><dd class="cmt"><p>String with well formed XML.</p></dd><dt>returns</dt><dd class="cmt"><p>A single String with all text contents from xmlString.</p></dd></dl></div>
+    </li><li name="edu.holycross.shot.mid.latinmodel#collectText" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="collectText(n:scala.xml.Node):String"></a><a id="collectText(Node):String"></a>
       <span class="permalink">
       <a href="../../../../../edu/holycross/shot/mid/latinmodel/index.html#collectText(n:scala.xml.Node):String" title="Permalink">
@@ -557,7 +559,9 @@ are enumerated by case objects extending this trait</p><p>The <code>name</code> 
         <span class="name">collectText</span><span class="params">(<span name="n">n: <span class="extype" name="scala.xml.Node">Node</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
-      
+      <p class="shortcomment cmt">Recursively collect contents of all text-node
+descendants of a given node.</p><div class="fullcomment"><div class="comment cmt"><p>Recursively collect contents of all text-node
+descendants of a given node.</p></div><dl class="paramcmts block"><dt class="param">n</dt><dd class="cmt"><p>Node to collect from.</p></dd><dt>returns</dt><dd class="cmt"><p>A single String with all text from n.</p></dd></dl></div>
     </li><li name="edu.holycross.shot.mid.latinmodel#collectText" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="collectText(n:scala.xml.Node,s:String):String"></a><a id="collectText(Node,String):String"></a>
       <span class="permalink">
